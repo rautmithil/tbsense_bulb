@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<title>Thunderboard Sense 2 Bulb</title>
+<body>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12" style="">
+              <h1 style="">Boosting Bluetooth Developer Experience with Web Bluetooth<br></h1>
+              <div class="col-md-12" style="">
+                <h3>Mithil Raut, Silicon Labs</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">Web Bluetooth allows web applications to communicate directly with IoT devices using Bluetooth LE.&nbsp;</h2>
+          <h5 class="text-secondary"><br>&gt;&nbsp; It’s a Bluetooth API specification developed by the World Wide Web Consortium (W3C).<br><br>&gt;&nbsp; The device acts as a Central and can communicate with other devices over Bluetooth 4 acting as a peripheral.<br><br>&gt;&nbsp;&nbsp;A "Bluetooth Internals" page is available in Chrome to inspect everything about nearby Bluetooth devices: status, services, characteristics, and descriptors.<br><br><br><br></h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><img class="img-fluid d-block mx-auto w-50" src="images/flow_chart.png"></div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Advantages</h2>
+          <h5 class="text-secondary">Scalability: Applications are scalable. Eliminates the need to a dedicated software or native apps.<br><br>Security: Websites can communicate with nearby Bluetooth devices in a secure and privacy preserving way. Requires HTTPS on website. Must be triggered by a user gesture.<br><br>User Experience: Enhances user experience in Bluetooth learning, interaction and application development.<br><br>Developer Experience: JavaScript based API makes it fast, easy to implement, run locally and integrate seamlessly with other web development languages.<br><br>Platform support: A subset of the Web Bluetooth API is available in Chrome OS, Chrome for Android M, Mac (Chrome 56) and Windows 10 (Chrome 70).&nbsp;<br></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-center">Demo: Thunderboard Sense 2 Bulb</h2>
+          <div class="app-layout mdl-layout mdl-js-layout">
+            <main class="mdl-layout__content">
+              <button onclick="connect()" class="connect-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                <i class="material-icons">bluetooth</i>Reset the device and click Connect </button>
+              <div class="power-button hidden">
+                <button onclick="togglePower()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect">
+                  <i class="material-icons">lightbulb_outline</i>
+                </button>
+              </div>
+              <div class="color-buttons hidden">
+                <button onclick="red()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect" style="background:#ffa0a0"> R </button>
+                <button onclick="green()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect" style="background:#a0ffa0"> G </button>
+                <button onclick="blue()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect" style="background:#a0a0ff"> B </button>
+              </div>
+              <div class="mic-button hidden">
+                <!--
+                <button onclick="listen()" class="mdl-button mdl-js-button mdl-button--fab mdl-button--raised mdl-js-ripple-effect">
+                  <i class="material-icons">microphone</i>
+                </button> -->
+                <br>
+                <h5 class="text-secondary">Reset the device to disconnect</h5>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="annyang.min.js"></script>
+  <script src="bulb.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
